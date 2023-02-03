@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="printDoc()">Print all</button>
+    <div id="display-content"></div>
+  </body>
+  <script>
+    const textDoc = `<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-bottom:6.0pt;text-align:right;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>MB14 &ndash; GTCG/SHB</span></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;text-align:center;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>CỘNG H&Ograve;A X&Atilde; HỘI CHỦ NGHĨA VIỆT NAM</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;text-align:center;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>Độc lập &ndash; Tự do &ndash; Hạnh ph&uacute;c</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;text-align:center;line-height:130%;'><br></p>
+<table style="float: left">
+    <tbody>
+        <tr>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+    </tbody>
+</table>
+<p><strong><span style='font-size:16px;line-height:130%;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></strong></p>
+<p><br></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;text-align:center;line-height:130%;'><strong><span style='font-size:16px;line-height:130%;font-family:"Times New Roman",serif;color:black;'>BẢNG K&Ecirc; KI&Ecirc;M CAM KẾT MỤC Đ&Iacute;CH SỬ DỤNG VỐN VAY</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;text-align:center;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>K&iacute;nh gửi: Ng&acirc;n h&agrave;ng TMCP S&agrave;i G&ograve;n &ndash; H&agrave; Nội,&nbsp;</span></strong><strong><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:red;'>&lt;T&ecirc;n pos của t&agrave;i sản đảm bảo&gt;</span></strong></p>
+<p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;margin-top:6.0pt;line-height:120%;'><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>T&ocirc;i/Ch&uacute;ng t&ocirc;i l&agrave;:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<ul style="list-style-type: undefined;margin-left:-0.25in;">
+    <li><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>T&ecirc;n kh&aacute;ch h&agrave;ng:&nbsp;</span><span style='line-height:120%;font-family:"Times New Roman",serif;font-family:"Times New Roman",serif;font-size:12.0pt;color:red;'>&lt;T&ecirc;n kh&aacute;ch h&agrave;ng&gt;</span></li>
+    <li><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>CMND/CCCD/Hộ chiếu:&nbsp;</span><span style='line-height:120%;font-family:"Times New Roman",serif;font-family:"Times New Roman",serif;font-size:12.0pt;color:red;'>&lt;Giấy tờ t&ugrave;y th&acirc;n&gt;</span><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>&nbsp;Ng&agrave;y cấp&nbsp;</span><span style='line-height:120%;font-family:"Times New Roman",serif;font-family:"Times New Roman",serif;font-size:12.0pt;color:red;'>&lt;ng&agrave;y&gt;</span><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>Nơi cấp&nbsp;</span><span style='line-height:120%;font-family:"Times New Roman",serif;font-family:"Times New Roman",serif;font-size:12.0pt;color:red;'>&lt;nơi cấp GTTT&gt;</span></li>
+    <li><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>Địa chỉ:&nbsp;</span><span style="line-height:120%;font-size:16px;">&lt;địa chỉ KH&gt;</span></li>
+    <li><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>Số CIF:&nbsp;</span><span style='line-height:120%;font-family:"Times New Roman",serif;font-family:"Times New Roman",serif;font-size:12.0pt;color:red;'>&lt;M&atilde; KH&gt;</span><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></li>
+</ul>
+<p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;margin-top:6.0pt;text-align:justify;line-height:120%;'><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>Bằng văn bản n&agrave;y, t&ocirc;i/ch&uacute;ng t&ocirc;i xin x&aacute;c nhận mục đ&iacute;ch sử dụng vốn cho khoản vay cầm cố GTCG tại Qu&yacute; ng&acirc;n h&agrave;ng, cụ thể như sau:</span></p>
+<ol style="list-style-type: decimal;margin-left:-0.25in;">
+    <li><strong><span style='line-height:120%;font-family:"Times New Roman",serif;font-family:"Times New Roman",serif;font-size:12.0pt;color:black;'>K&ecirc; khai th&ocirc;ng tin phương &aacute;n sử dụng vốn:</span></strong></li>
+</ol>
+<ol start="1" style="list-style-type: lower-alpha;margin-left:0in;">
+    <li><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>Mục đ&iacute;ch sử dụng vốn: B&ugrave; đắp tiền vay người th&acirc;n cho nhu cầu ti&ecirc;u d&ugrave;ng sau:</span></li>
+</ol>
+<p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;margin-top:6.0pt;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;text-align:justify;line-height:120%;'><span style="font-size:16px;line-height:120%;font-family:Wingdings;color:black;">o</span><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>&nbsp;Mua sắm nội thất gia đ&igrave;nh&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:16px;line-height:120%;font-family:Wingdings;color:black;">o</span><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>&nbsp;Du lịch &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-size:16px;line-height:120%;font-family:Wingdings;color:black;">o</span><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>&nbsp;Cưới hỏi</span></p>
+<p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;margin-top:6.0pt;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;text-align:justify;line-height:120%;'><span style="font-size:16px;line-height:120%;font-family:Wingdings;color:black;">o</span><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>&nbsp;Mua &ocirc; t&ocirc; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-size:16px;line-height:120%;font-family:Wingdings;color:black;">o</span><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>&nbsp;Mua nh&agrave; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:16px;line-height:120%;font-family:Wingdings;color:black;">o</span><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>&nbsp;Kh&aacute;m chữa bệnh</span></p>
+<p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;margin-top:6.0pt;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;text-align:justify;line-height:120%;'><span style="font-size:16px;line-height:120%;font-family:Wingdings;color:black;">o</span><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>&nbsp;Kh&aacute;c (ghi r&otilde;):&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..</span></p>
+<ol start="2" style="list-style-type: lower-alpha;margin-left:0in;">
+    <li><span style='line-height:120%;font-family:"Times New Roman",serif;color:black;font-size:16px;color:black;'>Tổng gi&aacute; trị phương &aacute;n:&nbsp;</span><span style='line-height:120%;font-family:"Times New Roman",serif;font-family:"Times New Roman",serif;font-size:12.0pt;color:red;'>&lt;Loan amount&gt;</span></li>
+</ol>
+<ol style="list-style-type: undefined;margin-left:-0.25in;">
+    <li><strong><span style='line-height:120%;font-family:"Times New Roman",serif;font-family:"Times New Roman",serif;font-size:12.0pt;color:black;'>Cam kết:</span></strong></li>
+</ol>
+<p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;margin-top:6.0pt;text-align:justify;line-height:120%;'><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>T&ocirc;i/ch&uacute;ng t&ocirc;i xin cam kết sử dụng vốn đ&uacute;ng mục đ&iacute;ch đ&atilde; k&ecirc; khai v&agrave; tự chịu tr&aacute;ch nhiệm về t&iacute;nh ch&iacute;nh x&aacute;c, trung thực của những th&ocirc;ng tin n&agrave;y. Đồng thời cam kết bồi thường to&agrave;n bộ c&aacute;c thiệt hại ph&aacute;t sinh tr&ecirc;n thực tế cho Qu&yacute; ng&acirc;n h&agrave;ng nếu th&ocirc;ng tin cung cấp kh&ocirc;ng ch&acirc;n thực g&acirc;y thiệt hại cho SHB.</span></p>
+<p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;margin-top:6.0pt;text-align:justify;line-height:120%;'><span style='font-size:16px;line-height:120%;font-family:"Times New Roman",serif;color:black;'>Tr&acirc;n trọng!</span></p>
+<table style="border: none;border-collapse:collapse;">
+    <tbody>
+        <tr>
+            <td style="width: 239.3pt;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;text-align:justify;line-height:125%;'><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+            </td>
+            <td style="width: 239.35pt;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;line-height:125%;'><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>&hellip;&hellip;&hellip;&hellip;.., ng&agrave;y&hellip;&hellip;.th&aacute;ng&hellip;&hellip;&hellip;.năm&hellip;&hellip;</span></p>
+                <p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;text-align:center;line-height:125%;'><strong><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>B&ecirc;n vay vốn</span></strong></p>
+                <p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;text-align:center;line-height:125%;'><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>(<em>K&yacute;, ghi r&otilde; họ t&ecirc;n)</em></span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style='margin:0in;font-size:17px;font-family:".VnTime",sans-serif;text-align:justify;line-height:125%;'><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;line-height:125%;'><strong><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;text-align:center;line-height:125%;'><strong><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></strong></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;line-height:125%;'><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;line-height:125%;'><span style='font-size:16px;line-height:125%;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>`;
+
+    function printDoc() {
+      let divContent = document.createElement("div");
+   
+      for (let i = 0; i < 4; i++) {
+        let item = document.createElement("div");
+        item.innerHTML = textDoc;
+        item.style.pageBreakAfter='always'
+
+        divContent.appendChild(item);
+      }
+
+      document.getElementById("display-content").innerHTML =
+        divContent.innerHTML;
+
+      let mywindow = window.open("", "print", "height='100%',width='100%'");
+
+      mywindow.document.write(
+        "<html><body >" + divContent.innerHTML + "</body></html>"
+      );
+      mywindow.document.close(); // necessary for IE >= 10
+      mywindow.focus(); // necessary for IE >= 10*/
+
+      mywindow.print();
+      mywindow.close();
+
+      return true;
+    }
+  </script>
+</html>
