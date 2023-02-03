@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <title>Document</title>
   </head>
   <body>
     <button onclick="printDoc()">Print all</button>
-    <div id="display-content"></div>
   </body>
   <script>
+    // sample content page
     const textDoc = `<p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;margin-bottom:6.0pt;text-align:right;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>MB14 &ndash; GTCG/SHB</span></p>
 <p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;text-align:center;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>CỘNG H&Ograve;A X&Atilde; HỘI CHỦ NGHĨA VIỆT NAM</span></strong></p>
 <p style='margin:0in;font-size:19px;font-family:".VnTime",sans-serif;text-align:center;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>Độc lập &ndash; Tự do &ndash; Hạnh ph&uacute;c</span></strong></p>
@@ -89,7 +88,8 @@
 
     function printDoc() {
       let divContent = document.createElement("div");
-   
+
+      // append all element to main element
       for (let i = 0; i < 4; i++) {
         let item = document.createElement("div");
         item.innerHTML = textDoc;
@@ -98,20 +98,15 @@
         divContent.appendChild(item);
       }
 
-      document.getElementById("display-content").innerHTML =
-        divContent.innerHTML;
-
+      // write content window print
       let mywindow = window.open("", "print", "height='100%',width='100%'");
-
       mywindow.document.write(
         "<html><body >" + divContent.innerHTML + "</body></html>"
       );
       mywindow.document.close(); // necessary for IE >= 10
       mywindow.focus(); // necessary for IE >= 10*/
-
       mywindow.print();
       mywindow.close();
-
       return true;
     }
   </script>
